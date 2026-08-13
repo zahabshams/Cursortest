@@ -10,7 +10,7 @@ const styles = [
     description: 'Grand mansions with ornate pillars and courtyards',
     category: 'Traditional South',
     features: ['Athangudi Tiles', 'Burma Teak', 'Open Courtyards', 'Pillared Halls'],
-    image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop'
+    image: '/styles/chettinad.jpg'
   },
   {
     id: 'kerala',
@@ -18,7 +18,7 @@ const styles = [
     description: 'Sloped roofs with wooden architecture and traditional charm',
     category: 'Traditional South',
     features: ['Sloped Roofs', 'Wooden Elements', 'Nalukettu', 'Verandah'],
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop'
+    image: '/styles/kerala.jpg'
   },
   {
     id: 'haveli',
@@ -26,7 +26,7 @@ const styles = [
     description: 'Rajasthani grandeur with intricate jharokhas and courtyards',
     category: 'Traditional North',
     features: ['Jharokhas', 'Inner Courtyards', 'Carved Walls', 'Chhatris'],
-    image: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&auto=format&fit=crop'
+    image: '/styles/haveli.jpg'
   },
   {
     id: 'colonial',
@@ -34,7 +34,7 @@ const styles = [
     description: 'British colonial elegance with high ceilings and symmetry',
     category: 'Heritage',
     features: ['High Ceilings', 'Columns', 'Symmetry', 'Verandahs'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop'
+    image: '/styles/colonial.jpg'
   },
   {
     id: 'rajput',
@@ -42,7 +42,7 @@ const styles = [
     description: 'Fort-like architecture with royal elements',
     category: 'Traditional North',
     features: ['Stone Walls', 'Turrets', 'Jalis', 'Royal Elements'],
-    image: 'https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?w=800&auto=format&fit=crop'
+    image: '/styles/rajput.jpg'
   },
   {
     id: 'modern-heritage',
@@ -50,7 +50,7 @@ const styles = [
     description: 'Contemporary design with traditional soul',
     category: 'Modern Fusion',
     features: ['Clean Lines', 'Traditional Elements', 'Natural Materials', 'Smart Features'],
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&auto=format&fit=crop'
+    image: '/styles/modern-heritage.jpg'
   },
 ];
 
