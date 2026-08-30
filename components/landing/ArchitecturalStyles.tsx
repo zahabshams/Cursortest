@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import { publicUrl } from '@/lib/public-url';
 
 const styles = [
   {
@@ -98,11 +98,10 @@ export default function ArchitecturalStyles() {
               className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer hover:-translate-y-2"
             >
               <div className="relative h-64 overflow-hidden">
-                <Image
-                  src={style.image}
+                <img
+                  src={publicUrl(style.image)}
                   alt={style.name}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-amber-700">
                   {style.category}

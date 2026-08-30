@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
+const basePath = process.env.NODE_ENV === "production" ? "/Cursortest" : "";
+
 const nextConfig: NextConfig = {
   output: "export",
+  basePath,
+  assetPrefix: basePath || undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -19,7 +26,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  basePath: process.env.NODE_ENV === "production" ? "/Cursortest" : "",
 };
 
 export default nextConfig;
