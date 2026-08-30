@@ -26,10 +26,10 @@ export default function CallToAction() {
             </Link>
             
             <Link 
-              href="/contact"
+              href="/booking"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-full font-semibold text-lg border-2 border-white/20 hover:bg-white/20 transition-all duration-300"
             >
-              Schedule Consultation
+              Book a Meeting
             </Link>
           </div>
           
