@@ -5,67 +5,72 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-amber-50 via-white to-orange-50">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
-      
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gray-950">
+      <div className="absolute inset-0 overflow-hidden">
+        <iframe
+          title="Heritage architecture film"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[180%] min-h-[180%] w-[180%] min-w-[180%] -translate-x-1/2 -translate-y-1/2 border-0"
+          src="https://www.youtube-nocookie.com/embed/jSlrNR2hAqc?autoplay=1&mute=1&controls=0&loop=1&playlist=jSlrNR2hAqc&modestbranding=1&rel=0&playsinline=1"
+          allow="autoplay; encrypted-media"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80" />
+      </div>
+
+      <div className="container relative z-10 mx-auto px-4 py-20">
+        <div className="mx-auto max-w-5xl text-center text-white">
           <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-amber-100 text-amber-900 rounded-full text-sm font-semibold tracking-wide uppercase">
+            <span className="inline-block rounded-full bg-amber-500/20 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-amber-200 ring-1 ring-amber-400/40">
               Heritage Architecture Redefined
             </span>
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+
+          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl">
             Craft Your
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600"> Legacy</span>
+            <span className="bg-gradient-to-r from-amber-300 to-orange-400 bg-clip-text text-transparent">
+              {' '}
+              Legacy
+            </span>
             <br />
             One Stone at a Time
           </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Experience the timeless elegance of traditional Indian architecture blended with modern luxury. 
+
+          <p className="mx-auto mb-8 max-w-3xl text-xl leading-relaxed text-white/80 md:text-2xl">
+            Experience the timeless elegance of traditional Indian architecture blended with modern luxury.
             Design a home that tells your story and echoes through generations.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Link 
+
+          <div className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
               href="/wizard"
-              className="group px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 hover:scale-105"
+              className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 px-8 py-4 text-lg font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               Start Your Journey
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
-            
-            <Link 
+
+            <Link
               href="/ai-consultation"
-              className="px-8 py-4 bg-white text-gray-900 rounded-full font-semibold text-lg border-2 border-gray-200 hover:border-amber-600 transition-all duration-300 hover:shadow-lg"
+              className="rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-amber-400 hover:bg-white/20"
             >
               Talk to AI Consultant
             </Link>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
+
+          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-8 md:grid-cols-4">
             {[
               { number: '500+', label: 'Heritage Homes' },
               { number: '50+', label: 'Architectural Styles' },
               { number: '25+', label: 'Years Experience' },
               { number: '98%', label: 'Client Satisfaction' },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-amber-700 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-gray-600 uppercase tracking-wide">
-                  {stat.label}
-                </div>
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="mb-2 text-3xl font-bold text-amber-300 md:text-4xl">{stat.number}</div>
+                <div className="text-sm uppercase tracking-wide text-white/60">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   );
 }
